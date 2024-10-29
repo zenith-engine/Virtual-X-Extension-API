@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+@font-face {
+    font-family: "CaviarDreams";
+    font-style: normal;
+    font-weight: normal;
+
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+
+
+@keyframes loaderGlow {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes neonText {
+    0% {
+        text-shadow: 0 0 1vh #6f00ff;
+    }
+
+    20% {
+        text-shadow: 0 0 1vh #7700ff;
+    }
+
+    40% {
+        text-shadow: 0 0 1vh #7700ff;
+    }
+
+    60% {
+        text-shadow: 0 0 1vh #7700ff;
+    }
+
+    80% {
+        text-shadow: 0 0 1vh #7700ff;
+    }
+
+    100% {
+        text-shadow: 0 0 1vh #6200ff;
+    }
+}
+
+
+
+@keyframes neonImg {
+    0% {
+        filter: drop-shadow(0 0 0.5vh #6200ff);
+    }
+
+    20% {
+        filter: drop-shadow(0 0 0.5vh #7700ff);
+    }
+
+    40% {
+        filter: drop-shadow(0 0 0.5vh #7700ff);
+    }
+
+    60% {
+        filter: drop-shadow(0 0 0.5vh #7700ff);
+    }
+
+    80% {
+        filter: drop-shadow(0 0 0.5vh #7700ff);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0.5vh #6200ff);
+    }
+}
+
+
+
+* {
+    user-select: none;
+}
+
+
+
+html,
+body {
+    overflow: hidden;
+
+    background: #080808;
+    color: white;
+}
+
+
+
+body {
+    font-family: "CaviarDreams", Arial, sans-serif;
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+}
+
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.music-management {
+    position: fixed;
+    top: 1vh;
+    right: 1vh;
+}
+
+
+
+.music-management button {
+    width: 4vh;
+    height: 4vh;
+}
+
+
+
+header {
+    font-weight: bold;
+
+    text-align: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.title img {
+    width: 4.5vh;
+    height: 4.5vh;
+
+    animation: neonImg 2s ease-in-out infinite;
+}
+
+
+
+h1 {
+    font-size: 4vh;
+
+    margin: 2vh 0;
+}
+
+
+
+header h1 {
+    font-family: "Jost";
+    font-weight: 200;
+    font-size: 6vh;
+
+    color: #4400ff;
+
+    animation: neonText 2s ease-in-out infinite;
+}
+
+
+
+h2 {
+    font-weight: lighter;
+
+    font-size: 2.5vh;
+
+    margin: 2vh 0;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.vertical {
+    flex-direction: column;
+}
+
+
+
+.centered {
+    text-align: center;
+}
+
+
+
+button {
+    font-size: 2vh;
+
+    box-shadow: 0 0 2vh 0 black;
+    border-radius: 1vh;
+
+    background: none;
+    color: white;
+
+    backdrop-filter: blur(2vh);
+    -webkit-backdrop-filter: blur(2vh);
+
+    border: 0;
+
+    cursor: pointer;
+    pointer-events: initial;
+
+    outline: none;
+
+    padding: 0;
+
+    transition: 0.25s;
+}
+
+
+
+button:hover {
+    transform: scale(1.2);
+}
+
+
+
+.link {
+    width: 4vh;
+    height: 4vh;
+
+    margin: 0 1vh;
+}
+
+
+
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #030406EB;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 999;
+}
+
+.loader {
+    background: url("../img/logo.png") no-repeat;
+    background-size: contain;
+
+    width: 10vh;
+    height: 10vh;
+
+    animation: loaderGlow 1s ease-in-out infinite;
+}
+
+.lock-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(20vh);
+    -webkit-backdrop-filter: blur(20vh);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: initial;
+
+    z-index: 998;
+}
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    left: 50%;
+
+    font-size: 1.5vh;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}

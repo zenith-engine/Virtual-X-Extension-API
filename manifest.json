@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Virtual X",
+    "version": "1.0.0",
+    "description": "",
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "backend/asset/image/vx_icon.png",
+            "48": "backend/asset/image/vx_icon.png",
+            "128": "backend/asset/image/vx_icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

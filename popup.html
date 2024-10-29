@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Extension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quantum&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            overflow: hidden;
+        }
+
+        .product {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Quantum', sans-serif;
+            color: #8A2BE2;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.8),
+                0 0 20px rgba(138, 43, 226, 0.6);
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.8),
+                0 0 20px rgba(138, 43, 226, 0.6);
+        }
+
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(138, 43, 226, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgba(138, 43, 226, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <h1 style="color: rgba(138, 43, 226, 0.8); text-shadow: 0 0 10px rgba(138, 43, 226, 0.8);">Virtual X</h1>
+            <input type="text" id="linkInput" placeholder="Entrez votre clé API ici...">
+            <button id="validateLink">Valider la clé API</button>
+            <div id="resultMessage"></div> <!-- Pour afficher le résultat -->
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
