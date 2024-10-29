@@ -1,4 +1,4 @@
 # Virtual-X-Extension-API
 
 
-- Check if key is valid for API
+- Check if key is valid for Virtual Engine API
